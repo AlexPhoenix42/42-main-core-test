@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 11:06:10 by codespace         #+#    #+#             */
-/*   Updated: 2025/01/02 15:39:37 by codespace        ###   ########.fr       */
+/*   Updated: 2025/01/07 18:31:56 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,8 @@
 // https://manp.gs/mac/3/printf
 // https://manp.gs/mac/3/stdarg
 
-// My ft_printf() just broke the system.
-// I dont know how is it bypassing the system's
-// security out of bounds check!!!!
-// My ft_printf() can read beyond the allowed memory!!!!
-
 // cc -g -O0 -Wall -Wextra -Werror 13.c
 // valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all ./a.out
-
-//static size_t	ft_printnstr(const char *str, va_arg(args, void*), size_t n);
 
 int	ft_printf(const char *str0, ...);
 
