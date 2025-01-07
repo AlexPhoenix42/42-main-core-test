@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 08:32:37 by codespace         #+#    #+#             */
-/*   Updated: 2025/01/07 18:49:59 by codespace        ###   ########.fr       */
+/*   Updated: 2025/01/07 19:17:14 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,8 @@ static void	init_printf_form(t_printf_form *form_found, char *is_found)
 	form_found->hex_ox[2] = '\0';
 }
 
-static void	get_form(char *str, char *flags, char *forms, t_printf_form *form_found)
+static void	get_form(char *str, char *flags,
+				char *forms, t_printf_form *form_found)
 {
 	if (!str || !flags || !forms || !form_found)
 		return ;
@@ -78,7 +79,7 @@ static void	get_form(char *str, char *flags, char *forms, t_printf_form *form_fo
 }
 
 static void	get_form_logic(char *str, char *flags,
-						char *forms, t_printf_form *form_found)
+				char *forms, t_printf_form *form_found)
 {
 	size_t	i;
 

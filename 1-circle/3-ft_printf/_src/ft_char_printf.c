@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 09:56:19 by codespace         #+#    #+#             */
-/*   Updated: 2025/01/07 18:43:20 by codespace        ###   ########.fr       */
+/*   Updated: 2025/01/07 19:15:20 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@ size_t		str_printf(va_list args, t_printf_form *form_found,
 				char *flags, char **str);
 static char	cndbool_1(size_t *j, t_printf_form *form_found,
 				char *flags, char *s);
-char		*ft_print_char(char *str, char **ptr, size_t *len_r, ssize_t n);
-char		*ft_print_char0(char *str, char **ptr, size_t *len_r, ssize_t n);
+char		*ft_print_char(char *str, char **ptr,
+				size_t *len_r, ssize_t n);
+char		*ft_print_char0(char *str, char **ptr,
+				size_t *len_r, ssize_t n);
 
 size_t	char_printf(va_list args, t_printf_form *form_found,
 			char *flags, char **str)

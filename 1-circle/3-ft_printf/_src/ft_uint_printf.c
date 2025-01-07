@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 09:20:33 by codespace         #+#    #+#             */
-/*   Updated: 2025/01/07 18:51:53 by codespace        ###   ########.fr       */
+/*   Updated: 2025/01/07 19:18:46 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ static size_t	uint_printf_logic0(t_printf_form *form_found, char *flags,
 					unsigned int ux, size_t uint_len);
 static size_t	uint_printf_logic(t_printf_form *form_found, char *flags,
 					unsigned int ux, size_t uint_len);
-static size_t	uint_printf_logic_prefix(t_printf_form *form_found, char *flags,
-					size_t uint_len);
+static size_t	uint_printf_logic_prefix(t_printf_form *form_found,
+					char *flags, size_t uint_len);
 
 size_t	uint_printf(va_list args, t_printf_form *form_found,
 			char *flags, char **str)
@@ -96,8 +96,8 @@ static size_t	uint_printf_logic(t_printf_form *form_found, char *flags,
 	return (len_r);
 }
 
-static size_t	uint_printf_logic_prefix(t_printf_form *form_found, char *flags,
-									size_t uint_len)
+static size_t	uint_printf_logic_prefix(t_printf_form *form_found,
+					char *flags, size_t uint_len)
 {
 	size_t	len_r;
 	size_t	j;
