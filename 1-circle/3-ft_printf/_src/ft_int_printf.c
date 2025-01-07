@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 08:56:32 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/29 16:10:45 by codespace        ###   ########.fr       */
+/*   Updated: 2025/01/07 18:49:28 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-// size_t			int_printf(va_list args, t_printf_form *form_found,
-// 					char *flags, char **str);
+size_t			int_printf(va_list args, t_printf_form *form_found,
+					char *flags, char **str);
 
 static size_t	int_printf_logic0(t_printf_form *form_found, size_t int_len,
 					char *flags, int x);

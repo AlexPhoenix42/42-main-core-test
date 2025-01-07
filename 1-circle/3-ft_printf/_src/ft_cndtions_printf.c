@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 12:20:34 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/29 16:09:15 by codespace        ###   ########.fr       */
+/*   Updated: 2025/01/07 18:45:04 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-// size_t	hex_printf_prefix_cnd(t_printf_form *form_found, size_t hex_len,
-// 			char *flags, unsigned int ux);
-// size_t	hex_printf_logic_cnd(t_printf_form *form_found, size_t hex_len,
-// 			char *flags, unsigned int ux);
-// size_t	int_printf_logic_prefix0_cnd(t_printf_form *form_found, size_t int_len,
-// 			char *flags, int x);
+size_t	hex_printf_prefix_cnd(t_printf_form *form_found, size_t hex_len,
+			char *flags, unsigned int ux);
+size_t	hex_printf_logic_cnd(t_printf_form *form_found, size_t hex_len,
+			char *flags, unsigned int ux);
+size_t	int_printf_logic_prefix0_cnd(t_printf_form *form_found, size_t int_len,
+			char *flags, int x);
 
 // hex_printf_prefix() condition without '.' flag
 size_t	hex_printf_prefix_cnd(t_printf_form *form_found, size_t hex_len,

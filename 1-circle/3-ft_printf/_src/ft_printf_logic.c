@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 08:32:37 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/29 16:10:53 by codespace        ###   ########.fr       */
+/*   Updated: 2025/01/07 18:49:59 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 #include "ft_printf_lib.h"
 #include <errno.h>
 
-// #define BOOL0		(form_found->widthc || form_found->precisionc) &&
-// ft_isdigit(str[i]) && !ft_isdigit(str[i + 1])
-// #define PRECISIONC	form_found->precisionc
-// #define ARR 		(char[]) {1, 1 , 1 , 1 , 1, 0}
+int			ft_printf_logic(char *str, va_list args);
 
-// int			ft_printf_logic(char *str, va_list args);
 static void	init_printf_form(t_printf_form *form_found, char *is_found);
 static void	get_form(char *str, char *flags, char *forms,
 			t_printf_form *form_found);

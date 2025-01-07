@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 16:04:50 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/29 16:10:12 by codespace        ###   ########.fr       */
+/*   Updated: 2025/01/07 18:50:45 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-// int	process_arg(va_list args, char **str,
-// 	t_printf_form *form_found, size_t *len_r);
+int	process_arg(va_list args, char **str,
+	t_printf_form *form_found, size_t *len_r);
+	
 static void	set_processed_flags(t_printf_form *form_found, char *flags);
 
 int	process_arg(va_list args, char **str,

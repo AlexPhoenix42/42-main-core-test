@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 09:12:25 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/29 16:11:09 by codespace        ###   ########.fr       */
+/*   Updated: 2025/01/07 18:51:28 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-// size_t			ptr_printf(va_list args, t_printf_form *form_found,
-// 					char *flags, char **str);
+size_t			ptr_printf(va_list args, t_printf_form *form_found,
+					char *flags, char **str);
+
 static size_t	ptr_printf_logic(void *p, t_printf_form *form_found,
 					char *flags, size_t hex_len);
 static size_t	ptr_printf_logic_prefix(void *p, t_printf_form *form_found,

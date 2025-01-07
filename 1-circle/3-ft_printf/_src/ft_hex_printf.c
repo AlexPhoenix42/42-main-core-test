@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 09:15:40 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/29 16:10:35 by codespace        ###   ########.fr       */
+/*   Updated: 2025/01/07 18:49:17 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,8 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-// #define WIDTH_HEX	form_found->width > hex_len
-						// fthexbool_1(form_found, hex_len)
-// #define MARGIN		(2 * (((flags[4]) / '#') & ux != 0))
-// #define WIDTH		form_found->width
-// #define PERCISION	form_found->precision
-
-// size_t			hex_printf(va_list args, t_printf_form *form_found,
-// 					char *flags, char **str);
+size_t			hex_printf(va_list args, t_printf_form *form_found,
+					char *flags, char **str);
 
 static size_t	hex_printf_frame(t_printf_form *form_found, char *flags,
 					unsigned int ux, size_t hex_len);
@@ -137,105 +131,3 @@ static size_t	hex_printf_prefix(t_printf_form *form_found, size_t hex_len,
 	}
 	return (len_r);
 }
-
-/*
-size_t	hex_printf_prefix(printf_form *form_found, size_t hex_len,
-			char *flags, unsigned int ux)
-{
-	size_t	len_r;
-	int		has_prefix;
-	int		padding_len;
-
-	len_r = 0;
-	has_prefix = (flags[4] == '#' && ux != 0);
-	padding_len = form_found->width - hex_len - (2 * has_prefix);
-
-	if (flags[5] != '.')
-	{
-		if (form_found->width > hex_len + (2 * has_prefix) &&
-			flags[2] != '0' && flags[0] != '-')
-			while (++(form_found->i) < padding_len)
-				len_r += write(1, " ", 1);
-		if (has_prefix)
-			len_r += write(1, form_found->hex_ox, 2);
-		if (form_found->width > hex_len + (2 * has_prefix) &&
-			flags[2] == '0')
-			while (++(form_found->i) < padding_len)
-				len_r += write(1, "0", 1);
-	}
-	else
-	{
-		if (has_prefix)
-			len_r += write(1, form_found->hex_ox, 2);
-		if (form_found->precision > hex_len)
-			while (++(form_found->i) < form_found->precision - hex_len)
-				len_r += write(1, "0", 1);
-	}
-	return (len_r);
-}
-
-
-size_t	hex_printf_prefix(printf_form *form_found, size_t hex_len,
-			char *flags, unsigned int ux)
-{
-	size_t	len_r = 0;
-	int		has_prefix = (flags[4] == '#' && ux != 0);
-	int		padding_len = form_found->width - hex_len - (2 * has_prefix);
-
-	if (flags[5] != '.')
-	{
-		if (form_found->width > hex_len + (2 * has_prefix) &&
-			flags[2] != '0' && flags[0] != '-')
-			while (++(form_found->i) < padding_len)
-				len_r += write(1, " ", 1);
-		if (has_prefix)
-			len_r += write(1, form_found->hex_ox, 2);
-		if (form_found->width > hex_len + (2 * has_prefix) && flags[2] == '0')
-			while (++(form_found->i) < padding_len)
-				len_r += write(1, "0", 1);
-	}
-	else
-	{
-		if (has_prefix)
-			len_r += write(1, form_found->hex_ox, 2);
-		while (form_found->precision > hex_len &&
-				++(form_found->i) < form_found->precision - hex_len)
-			len_r += write(1, "0", 1);
-	}
-	return (len_r);
-}
-
-
-size_t	hex_printf_prefix(printf_form *form_found, size_t hex_len,
-			char *flags, unsigned int ux)
-{
-	size_t	len_r;
-	int		has_prefix;
-	int		padding_len;
-
-	len_r = 0;
-	has_prefix = (flags[4] == '#' && ux != 0);
-	padding_len = form_found->width - hex_len - (2 * has_prefix);
-	if (flags[5] != '.')
-	{
-		if (form_found->width > hex_len + (2 * has_prefix) &&
-			flags[2] != '0' && flags[0] != '-')
-			while (++(form_found->i) < padding_len)
-				len_r += write(1, " ", 1);
-		if (has_prefix)
-			len_r += write(1, form_found->hex_ox, 2);
-		if (form_found->width > hex_len + (2 * has_prefix) && flags[2] == '0')
-			while (++(form_found->i) < padding_len)
-				len_r += write(1, "0", 1);
-	}
-	if (flags[5] == '.')
-	{
-		if (has_prefix)
-			len_r += write(1, form_found->hex_ox, 2);
-		while (form_found->precision > hex_len &&
-				++(form_found->i) < form_found->precision - hex_len)
-			len_r += write(1, "0", 1);
-	}
-	return (len_r);
-}
-*/
